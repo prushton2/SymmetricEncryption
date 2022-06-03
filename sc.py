@@ -22,8 +22,8 @@ class Scanner:
             encrypt(args)
         elif(args[0] == "decrypt"):
             decrypt(args)
-        elif(args[0] == "cls"):
-            cls(args)
+        elif(args[0] == "clr"):
+            clr(args)
         elif(args[0] == "read"):
             read(args)
         elif(args[0] == "write"):
@@ -90,7 +90,7 @@ def decrypt(args):
         f.write(decrypted)
     print(f"Decrypted {fileName} to {outfile}\n type 'read {outfile}' to read the file")
 
-def cls(args):
+def clr(args):
     fileName = outfile if len(args) == 1 else args[1]
     with open(fileName, "w") as f:
         f.write("")
